@@ -20,6 +20,4 @@ Gem::Specification.new do |s|
   s.add_dependency 'cells-slim' # MIT-License
   s.add_dependency 'rails'
   s.add_dependency 'trailblazer-cells' # MIT-License
-
-  s.add_development_dependency 'sqlite3'
 end
