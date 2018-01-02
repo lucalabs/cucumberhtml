@@ -1,0 +1,6 @@
+.tab-pane.fade class="#{feature_classes}" id="#{feature_id}" role="tabpanel" aria-labelledby="#{feature_id}-list"
+  h2 = name
+  = description
+  - element_list.each do |element|
+    = element(element)
+
