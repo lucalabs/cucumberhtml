@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 $LOAD_PATH.push File.expand_path('../lib', __FILE__)
 
 # Maintain your gem's version:
@@ -16,8 +18,9 @@ Gem::Specification.new do |s|
 
   s.files = Dir['{app,config,db,lib}/**/*', 'MIT-LICENSE', 'Rakefile', 'README.md']
 
-  s.add_dependency 'cells-rails' # MIT-License
-  s.add_dependency 'cells-slim' # MIT-License
-  s.add_dependency 'rails'
-  s.add_dependency 'trailblazer-cells' # MIT-License
+  s.add_development_dependency 'rubocop'
+
+  s.add_dependency 'cells-rails'
+  s.add_dependency 'cells-slim'
+  s.add_dependency 'trailblazer-cells'
 end

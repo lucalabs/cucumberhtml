@@ -20,7 +20,6 @@ end
 # load 'rails/tasks/engine.rake'
 
 # load 'rails/tasks/statistics.rake'
-import './lib/tasks/downloader.rake'
 
 require 'bundler/gem_tasks'
 

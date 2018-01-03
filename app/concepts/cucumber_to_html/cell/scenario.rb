@@ -2,12 +2,11 @@
 
 module CucumberToHtml::Cell
   class Scenario < Element
-    # class     CucumberToHtml::Cell::Scenario < Element
     def success?
       model['steps'].all? do |step|
         step.dig('result', 'status') == 'passed'
       end
-        end
+    end
 
     def failure?
       false # TBD

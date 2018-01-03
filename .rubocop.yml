@@ -1,0 +1,14 @@
+AllCops:
+  TargetRubyVersion: 2.5
+
+  Exclude:
+    - 'Gemfile*'
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Metrics/LineLength:
+  Max: 120
+
+Style/Documentation:
+  Enabled: false
