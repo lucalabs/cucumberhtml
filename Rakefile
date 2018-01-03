@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 begin
   require 'bundler/setup'
 rescue LoadError
@@ -18,6 +20,7 @@ end
 # load 'rails/tasks/engine.rake'
 
 # load 'rails/tasks/statistics.rake'
+import './lib/tasks/downloader.rake'
 
 require 'bundler/gem_tasks'
 
