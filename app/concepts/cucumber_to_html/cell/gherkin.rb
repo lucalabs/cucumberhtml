@@ -4,7 +4,7 @@ module CucumberToHtml::Cell
   class Gherkin < Cucumberhtml::Cell
     def feature_menu_list
       res = '<div class="list-group" id="list-tab" role="tablist">'
-      model.each_with_index do |feature, index|
+      sorted_feature_list.each_with_index do |feature, index|
         res += Feature.call(feature, active: index.zero?).call(:feature_menu_item)
       end
       res + '</div>'
@@ -12,10 +12,16 @@ module CucumberToHtml::Cell
 
     def feature_list
       res = '<div class="tab-content" id="nav-tabContent">'
-      model.each_with_index do |feature, index|
+      sorted_feature_list.each_with_index do |feature, index|
         res += Feature.call(feature, active: index.zero?).call
       end
       res + '</div>'
+    end
+
+    private
+
+    def sorted_feature_list
+      model.sort_by { |a| a[:name] }
     end
   end
 end
