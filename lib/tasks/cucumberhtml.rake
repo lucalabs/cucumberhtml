@@ -16,7 +16,7 @@ namespace :cucumberhtml do
     file = File.read(filename)
     json = JSON.parse(file)
     html = CucumberToHtml::Cell::Gherkin.call(json)
-    open(outfile, 'w') do |f|
+    File.open(outfile, 'w') do |f|
       f << html
     end
   end

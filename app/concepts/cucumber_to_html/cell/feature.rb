@@ -44,8 +44,10 @@ module CucumberToHtml::Cell
         Scenario.call(element).call
       when 'Background'
         Element.call(element).call if element == element_list[0]
+      when 'Scenario Outline'
+        ScenarioOutline.call(element).call
       else
-        raise 'Unknown element'
+        raise "Unknown element: #{element['keyword']}"
       end
     end
   end

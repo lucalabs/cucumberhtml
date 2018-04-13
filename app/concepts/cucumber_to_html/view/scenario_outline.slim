@@ -1,0 +1,7 @@
+.card.mb-3 class=border_classes
+  .card-body
+    /h5.card-title = "Scenario: #{name}"
+    h5.card-title = name
+    p.card-text
+      - steps.each do |step|
+        = step(step)
